@@ -3,14 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Reservation</title>
-    <link rel="stylesheet" href="code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
 </head>
 
 <body>
@@ -19,12 +11,18 @@
             <h1>Reserve a Room</h1>            
         </div>
     </header>
-    <p>Date: <input type="text" id="datepicker"></p>
     <form action="reservation.php" method="get">
-        <p><label>Date </label><input type="text" name="Date" value="" required></p>
-        <p><label>StartTime </label><input type="text" name="StartTime" value="" required></p>
-        <p><label>EndTime </label><input type="text" name="EndTime" value="" required></p>
-        <p><label>RoomNumber </label><input type="text" name="RoomNumber" value="" required></p>
+        <p><label>User ID </label><input type="text" name="UserID" value="" required></p>
+        <p><label>Date </label><input type="date" name="Date" value="" required></p>
+        <p><label>StartTime </label><input type="time" name="StartTime" value="" required></p>
+        <p><label>EndTime </label><input type="time" name="EndTime" value="" required></p>
+        <p>Room: <select>
+            <option value="denver">Denver</option>
+            <option value="san_francisco">San Francisco</option>
+            <option value="rockhampton">Rockhampton</option>
+            <option value="keystone">Keystone</option>
+        </select></p>
+
         <input type="submit" value="Create Reservation">
     </form>
 </body>
